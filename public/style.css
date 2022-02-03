@@ -1,0 +1,214 @@
+/* google font  */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Bebas+Neue&family=Poppins:wght@300;600;700&display=swap');
+
+/* font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Poppins', sans-serif; */
+
+/* Bebes Neue  */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Bebas+Neue&display=swap');
+
+/* font-family: 'Barlow Condensed', sans-serif; */
+/* font-family: 'Bebas Neue', cursive; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+}
+
+/* ===Variable=== */
+
+:root{
+    --primary-color:#2A2438;
+    --secondary-color:#5C5470 ;
+    --text-color:#DBD8E3 ;
+    --secondary-text-color: #352F44;
+
+    --pure-white-color:#EEEEEE;
+
+
+}
+
+body{
+    background-color:var(--secondary-color);
+}
+
+body.dark{
+    --primary-color:#5C5470;
+    --secondary-color:#2A2438;
+    --text-color #352F44 ;
+    --secondary-text-color: #DBD8E3;
+
+    --pure-white-color:#EEEEEE;
+    
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80px;
+    width: 100%;
+    background-color: var(--pure-white-color);
+}
+
+nav .nav-bar{
+    height: 100%;
+    width: 80%;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+}
+   
+.nav-bar .nav-links{
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-bar .nav-links li{
+    margin: 0 5px;
+    list-style: none;
+
+}
+.nav-links li a{
+    position: relative;
+    font-size: 1.0625rem;
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 12px;
+}
+
+ nav .nav-bar .logo a{
+    font-size: 1.5625rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.nav-links li a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background:var(--text-color);
+    display: block;
+    margin: 0 auto;
+    margin-left: 9px;
+    transition: 0.7s;
+}
+
+.nav-links li a:hover::after{
+    width: 90%;
+}
+
+.nav-bar .darklight-searchBox{
+    display: flex;
+    align-items: center;
+}
+
+.darklight-searchBox .dark-light ,
+.darklight-searchBox .searchBox{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    margin: 0 5px;
+}
+
+.dark-light i, .searchBox i{
+    position: absolute;
+    color:var(--text-color);
+    font-size: 1.375rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.dark-light i.sun {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dark-light.active i.sun {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dark-light.active i.moon {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.searchBox i.cancel{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.searchBox{
+    position: relative;
+
+}
+.searchBox .search-field{
+    position: absolute;
+    bottom: -85px;
+    right: 5px;
+    height: 50px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 3px;
+    border-radius: 6px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1) ;
+
+}
+.searchToggle.active ~ .search-field{
+    opacity: 1;
+    pointer-events: ;
+}
+
+
+.search-field::before{
+    content: "";
+    position: absolute;
+    right: 14px;
+    top: -4px;
+    height: 12px;
+    width: 12px;
+    background-color: var(--secondary-color);
+    transform: rotate(-45deg);
+    z-index: -1;
+}
+
+.search-field input{
+    height: 100%;
+    width: 100%;
+    padding: 0 45px 0 15px ;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem ;
+    font-weight:400;
+    color: var(--primary-color);
+  
+}
+
+.search-field i{
+    position: absolute;
+    color: var(--secondary-text-color);
+    right: 15px;
+    font-size: 1.375rem;
+
+}
+
+

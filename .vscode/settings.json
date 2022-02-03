@@ -1,0 +1,3 @@
+{
+    "gitlens.codeLens.authors.command": "gitlens.showQuickRepoHistory"
+}
