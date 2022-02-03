@@ -1,3 +1,4 @@
+// ===Variable=== 
 const body = document.querySelector('body'),
       nav  = document.querySelector('nav'),
       modeToggle = document.querySelector(".dark-light"),
